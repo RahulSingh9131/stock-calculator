@@ -26,7 +26,11 @@ function clickListener(){
     var qty=Number(stockQuantity.value);
     var curr=Number(currentPrice.value);
     if(ip&&qty&&curr){
-        calculateProfitAndLoss(ip,qty,curr);
+        if(ip>0&&qty>0&&curr>0){
+            calculateProfitAndLoss(ip,qty,curr);
+        }else{
+            outputMessage.innerText="values entered should be greater than zero";
+        }   
     }else{
         outputMessage.innerText="Please enter all the fields";
     }
