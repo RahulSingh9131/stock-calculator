@@ -8,7 +8,6 @@ function calculateProfitAndLoss(initial,quantity,current){
     if(initial>current){
         var loss=(initial-current)*quantity;
         var lossPercent=(loss/initial)*100;
-        // console.log(`the loss ocurred is ${loss} and loss percentage is: ${lossPercent}%`);
         outputMessage.innerText="the loss occurred is: "+loss+" and the percentage is:"+lossPercent.toFixed(2)+"%";
         outputMessage.style.color="red";
     }else if(current>initial){
